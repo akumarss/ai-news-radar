@@ -2,9 +2,11 @@ name: Update AI news radar
 
 on:
   schedule:
-    # Every 3 hours. Times are UTC and GitHub delays scheduled runs under
-    # load, so treat this as "roughly every 3 hours", not a hard guarantee.
-    - cron: "0 */3 * * *"
+    # Every 30 minutes. Times are UTC and GitHub delays scheduled runs under
+    # load — a 30-minute cron in practice lands every 35-50 minutes, and
+    # under heavy load GitHub drops runs rather than queueing them. Treat
+    # this as "about twice an hour", not a guarantee.
+    - cron: "*/30 * * * *"
   workflow_dispatch:
   push:
     branches: [main]

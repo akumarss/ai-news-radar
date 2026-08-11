@@ -3,7 +3,7 @@
 A static dashboard that collects GenAI, LLM and ML news from research labs,
 Hacker News, arXiv, Reddit and Bluesky, collapses duplicate coverage of the
 same story into one card, ranks what's left, and republishes itself every
-three hours. Runs entirely on GitHub Actions and GitHub Pages — no server, no
+30 minutes. Runs entirely on GitHub Actions and GitHub Pages — no server, no
 cost.
 
 ## Why these sources
@@ -156,8 +156,11 @@ docs/data/          generated feed data, committed by the workflow
 
 - Scheduled workflows are disabled after 60 days without repo activity. The
   data commits reset that counter, so an active radar keeps itself alive.
-- Cron times are UTC and GitHub delays scheduled runs under load; a 3-hourly
-  job in practice lands within about 20 minutes of the hour.
+- Cron times are UTC and GitHub delays scheduled runs under load; a
+  30-minute job in practice lands every 35-50 minutes, and GitHub drops
+  runs rather than queueing them when the shared runners are busy. Most
+  runs are also no-ops: RSS feeds refresh hourly at best, so only Hacker
+  News and Bluesky move meaningfully between two runs half an hour apart.
 - If every source fails, the collector exits non-zero without writing, so a
   network blip can't blank the dashboard.
 - Read state and filter selections are stored in `localStorage`, per browser.
