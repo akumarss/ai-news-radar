@@ -64,6 +64,24 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh news data [skip ci]"
-          # Rebase before pushing so a manual run racing the cron doesn't fail.
-          git pull --rebase --autostash origin ${{ github.ref_name }}
-          git push
+          # Two runs can be in flight at once (a manual dispatch racing the
+          # cron), and both rewrite docs/data wholesale — so a plain rebase
+          # hits a content conflict in items.json and the run dies. The file
+          # is a full regeneration, never an edit, so there is nothing to
+          # merge: this run's copy always wins. Note `-X theirs` is correct
+          # and not a typo — during a rebase "theirs" is the commit being
+          # replayed, which is ours.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — replaying onto origin."
+            git fetch origin ${{ github.ref_name }}
+            if ! git rebase -X theirs origin/${{ github.ref_name }}; then
+              git rebase --abort || true
+              echo "Could not replay onto origin."
+              exit 1
+            fi
+          done
+          echo "Still could not push after 3 attempts."
+          exit 1
