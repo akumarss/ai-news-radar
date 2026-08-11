@@ -1,0 +1,599 @@
+# AI news radar — source and scoring configuration.
+# Everything here is data. Add a feed, get a source. No code changes needed.
+
+# ---------------------------------------------------------------------------
+# Vendor / lab blogs. These are the spine: they publish the canonical
+# announcement pages that social posts merely link to.
+# `weight` multiplies the item score. `tier` drives the source badge colour.
+# ---------------------------------------------------------------------------
+feeds:
+  - name: OpenAI
+    url: https://openai.com/news/rss.xml
+    weight: 2.0
+    tier: lab
+  # Anthropic publishes no official RSS feed. This is a community mirror that
+  # scrapes the newsroom. It has lagged before — if it goes stale, Anthropic
+  # launches still arrive via Hacker News, which covers them reliably.
+  - name: Anthropic
+    url: https://raw.githubusercontent.com/taobojlen/anthropic-rss-feed/main/anthropic_news_rss.xml
+    weight: 2.0
+    tier: lab
+  - name: Google Research
+    url: https://research.google/blog/rss/
+    weight: 1.8
+    tier: lab
+  - name: Google DeepMind
+    url: https://deepmind.google/blog/rss.xml
+    weight: 1.8
+    tier: lab
+  # ai.meta.com/blog has no feed. Meta's engineering blog does, and it carries
+  # the AI research posts (SAM, Llama, PyTorch) that matter here.
+  - name: Meta Engineering
+    url: https://engineering.fb.com/feed/
+    weight: 1.8
+    tier: lab
+  # Qwen and Mistral ship open weights constantly and both publish a real
+  # feed. DeepSeek, Moonshot (Kimi), MiniMax, Z.ai and Alibaba do not publish
+  # any usable RSS — they are covered by the hf_models block instead.
+  - name: Qwen
+    url: https://qwenlm.github.io/blog/index.xml
+    weight: 2.0
+    tier: lab
+  - name: Mistral
+    url: https://mistral.ai/rss.xml
+    weight: 2.0
+    tier: lab
+  - name: Hugging Face
+    url: https://huggingface.co/blog/feed.xml
+    weight: 1.5
+    tier: platform
+  - name: NVIDIA AI
+    url: https://blogs.nvidia.com/feed/
+    weight: 1.3
+    tier: platform
+  - name: AWS Machine Learning
+    url: https://aws.amazon.com/blogs/machine-learning/feed/
+    weight: 1.2
+    tier: cloud
+  - name: Microsoft Research
+    url: https://www.microsoft.com/en-us/research/feed/
+    weight: 1.4
+    tier: lab
+  - name: Azure AI
+    url: https://azure.microsoft.com/en-us/blog/feed/
+    weight: 1.2
+    tier: cloud
+  # Mistral and Cohere publish no working feed as of this writing. Their
+  # launches still land through Hacker News. Run `python3 collect.py
+  # --check-feeds` periodically — vendor feeds rot constantly.
+  - name: BAIR Berkeley
+    url: https://bair.berkeley.edu/blog/feed.xml
+    weight: 1.2
+    tier: academic
+  - name: Sebastian Raschka
+    url: https://magazine.sebastianraschka.com/feed
+    weight: 1.3
+    tier: writer
+  - name: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+    weight: 1.3
+    tier: writer
+
+  # --- practitioners: evals, agents, RAG, inference. These carry the
+  # implementation detail the vendor blogs leave out. All verified live.
+  - name: Interconnects
+    url: https://www.interconnects.ai/feed
+    weight: 1.5
+    tier: writer
+  - name: Latent Space
+    url: https://www.latent.space/feed
+    weight: 1.4
+    tier: writer
+  - name: Import AI
+    url: https://importai.substack.com/feed
+    weight: 1.4
+    tier: writer
+  - name: Hamel Husain
+    url: https://hamel.dev/index.xml
+    weight: 1.4
+    tier: writer
+  - name: Eugene Yan
+    url: https://eugeneyan.com/rss/
+    weight: 1.3
+    tier: writer
+  - name: Lilian Weng
+    url: https://lilianweng.github.io/index.xml
+    weight: 1.5
+    tier: writer
+  - name: Vicki Boykis
+    url: https://vickiboykis.com/index.xml
+    weight: 1.1
+    tier: writer
+  - name: The Gradient
+    url: https://thegradient.pub/rss/
+    weight: 1.1
+    tier: academic
+  # --- tooling and serving vendors
+  - name: Weights & Biases
+    url: https://wandb.ai/fully-connected/rss.xml
+    weight: 1.1
+    tier: tooling
+  - name: Together AI
+    url: https://www.together.ai/blog/rss.xml
+    weight: 1.2
+    tier: platform
+  - name: Weaviate
+    url: https://weaviate.io/blog/rss.xml
+    weight: 1.0
+    tier: tooling
+  # --- data engineering: pipelines, feature stores, warehouse-side work
+  - name: Netflix Tech
+    url: https://netflixtechblog.com/feed
+    weight: 1.1
+    tier: engineering
+  - name: Airbnb Engineering
+    url: https://medium.com/feed/airbnb-engineering
+    weight: 1.1
+    tier: engineering
+  - name: dbt Labs
+    url: https://www.getdbt.com/blog/rss.xml
+    weight: 1.0
+    tier: engineering
+  # Chip Huyen (Jan 2025), Jay Alammar (Nov 2025) and Sebastian Ruder (2024)
+  # all have working feeds but have stopped publishing — left out rather than
+  # padding --check-feeds with permanent "stale" warnings.
+
+# ---------------------------------------------------------------------------
+# Hacker News via the Algolia API. Free, no auth, no key.
+# Terms are quoted so Algolia does exact phrase matching — without quotes its
+# typo tolerance matches "LLM" against "limiting" and the feed fills with junk.
+# ---------------------------------------------------------------------------
+hackernews:
+  enabled: true
+  weight: 1.4
+  # 25 proved too strict in practice — it yielded only a handful of items a
+  # day. 12 gives useful volume without dragging in unranked noise.
+  min_points: 12
+  queries:
+    - '"LLM"'
+    - '"GenAI"'
+    - '"generative AI"'
+    - '"machine learning"'
+    - '"fine-tuning"'
+    - '"RAG"'
+    - '"AI agent"'
+    - '"transformer model"'
+    # Launch posts often avoid the older vocabulary above: the Muse Glimmer
+    # release (424 pts) was titled "open weights 30B local coding model" and
+    # matched none of them. Quoted phrases are exact, so '"AI agent"' does
+    # not catch "local agents".
+    - '"agentic"'
+    - '"open-weight"'
+    - '"LangChain"'
+    - '"vLLM"'
+    - '"evals"'
+    - '"MCP"'
+    - '"context engineering"'
+    - '"inference"'
+
+# ---------------------------------------------------------------------------
+# Hugging Face model releases. Free, no auth. This is the primary signal for
+# open-weight launches: the labs below upload weights before (or instead of)
+# writing a blog post, and several publish no feed at all.
+# ---------------------------------------------------------------------------
+hf_models:
+  enabled: true
+  weight: 2.2
+  # Likes accumulate within hours on a real launch and filter out the
+  # long tail of checkpoints, quantisations and staging repos.
+  min_likes: 30
+  limit: 30
+  max_age_days: 90
+  authors:
+    - deepseek-ai
+    - Qwen
+    - moonshotai
+    - MiniMaxAI
+    - zai-org
+    - meta-llama
+    - mistralai
+    - openai
+    - google
+    - Alibaba-NLP
+    - ByteDance-Seed
+    - internlm
+    - tencent
+    - baidu
+    - allenai
+    - ibm-granite
+    - LiquidAI
+    - nvidia
+    - microsoft
+
+# ---------------------------------------------------------------------------
+# GitHub releases. Free, no auth. The only reliable signal for the agent and
+# eval frameworks: LangChain's blog feed returns 200 with zero entries, and
+# Langfuse / LlamaIndex publish no feed at all. Release titles are bare
+# version strings, so each repo carries a label and blurb.
+# ---------------------------------------------------------------------------
+gh_releases:
+  enabled: true
+  weight: 1.2
+  # Only the newest few per repo — some projects tag several times a day.
+  per_repo: 4
+  max_age_days: 90
+  repos:
+    - repo: langchain-ai/langchain
+      label: LangChain
+      blurb: LLM application framework
+    - repo: langchain-ai/langgraph
+      label: LangGraph
+      blurb: stateful agent orchestration
+    - repo: langfuse/langfuse
+      label: Langfuse
+      blurb: LLM observability and tracing
+    - repo: run-llama/llama_index
+      label: LlamaIndex
+      blurb: RAG and data framework
+    - repo: stanfordnlp/dspy
+      label: DSPy
+      blurb: declarative LLM programming
+    - repo: pydantic/pydantic-ai
+      label: Pydantic AI
+      blurb: typed agent framework
+    - repo: vllm-project/vllm
+      label: vLLM
+      blurb: high-throughput inference serving
+    - repo: sgl-project/sglang
+      label: SGLang
+      blurb: fast LLM serving runtime
+    - repo: ollama/ollama
+      label: Ollama
+      blurb: local model runner
+    - repo: huggingface/transformers
+      label: Transformers
+      blurb: model library
+    - repo: huggingface/trl
+      label: TRL
+      blurb: RLHF and post-training
+    - repo: unslothai/unsloth
+      label: Unsloth
+      blurb: fast fine-tuning
+    - repo: confident-ai/deepeval
+      label: DeepEval
+      blurb: LLM evaluation framework
+    - repo: promptfoo/promptfoo
+      label: Promptfoo
+      blurb: prompt and eval testing
+    - repo: explodinggradients/ragas
+      label: Ragas
+      blurb: RAG evaluation
+    - repo: modelcontextprotocol/servers
+      label: MCP Servers
+      blurb: Model Context Protocol
+    - repo: dbt-labs/dbt-core
+      label: dbt
+      blurb: analytics engineering
+    - repo: feast-dev/feast
+      label: Feast
+      blurb: feature store
+    - repo: duckdb/duckdb
+      label: DuckDB
+      blurb: analytical database
+  # ggml-org/llama.cpp is deliberately absent: it tags build numbers
+  # ("b10344") several times a day, which would swamp everything else.
+
+# ---------------------------------------------------------------------------
+# arXiv. Free, no auth. Categories rather than keywords — cleaner signal.
+# ---------------------------------------------------------------------------
+arxiv:
+  enabled: true
+  weight: 1.0
+  max_results: 60
+  categories:
+    - cs.CL
+    - cs.LG
+    - cs.AI
+
+# ---------------------------------------------------------------------------
+# Reddit. Free for non-commercial use at 100 QPM, but needs an OAuth app.
+# Skipped silently when REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET are unset.
+# ---------------------------------------------------------------------------
+reddit:
+  enabled: true
+  weight: 1.2
+  min_score: 40
+  listing: top
+  timeframe: day
+  limit: 25
+  subreddits:
+    - LocalLLaMA
+    - MachineLearning
+    - singularity
+    - OpenAI
+    - StableDiffusion
+
+# ---------------------------------------------------------------------------
+# Bluesky. Free and unlimited on public data, but searchPosts needs a session.
+# Skipped silently when BLUESKY_HANDLE / BLUESKY_APP_PASSWORD are unset.
+# Create an app password at Settings -> App Passwords (never your real one).
+# ---------------------------------------------------------------------------
+bluesky:
+  enabled: true
+  weight: 0.9
+  # Topic queries pull from the whole network, so they need a real like
+  # threshold to stay clean. Handles are curated, so they don't.
+  min_likes: 25
+  handle_min_likes: 3
+  limit: 40
+  queries:
+    - LLM
+    - "open source AI"
+    - GenAI
+    - "AI research"
+    - '"open weights"'
+    - '"open-weight"'
+    - Qwen
+    - DeepSeek
+    - vLLM
+    - MCP
+    - LangGraph
+    - evals
+  # Verified live via app.bsky.actor.getProfile — follower and post counts
+  # checked, dead and dormant accounts left out. Posts without an outbound
+  # link are dropped by the fetcher, so these yield "here's a thing worth
+  # reading" links rather than chatter.
+  handles:
+    - natolambert.bsky.social      # open models, post-training (Interconnects)
+    - rasbt.bsky.social            # LLM training and architecture
+    - thomwolf.bsky.social         # Hugging Face cofounder
+    - danielvanstrien.bsky.social  # Hugging Face, datasets
+    - swyx.io                      # Latent Space, AI engineering
+    - eugeneyan.com                # applied ML, evals, RAG
+    - simonwillison.net            # LLM tooling, daily
+    - vickiboykis.com              # ML engineering, embeddings
+    - karpathy.bsky.social         # rare, but worth catching
+    - togelius.bsky.social         # research
+    - yoshuabengio.bsky.social     # research, safety
+    - mmitchell.bsky.social        # ethics and policy
+  # Skipped: hf.co, lilianweng, percyliang, sarahookr, timnitgebru and
+  # paperswithcode do not exist on Bluesky; hamelhusain and clem.hf.co exist
+  # but have posted a handful of times. arxiv-cs-cl posts every cs.CL paper
+  # (44k posts) — arXiv is already a first-class source, so it would only
+  # duplicate at volume.
+
+# ---------------------------------------------------------------------------
+# Topic tagging and relevance. Matched with word boundaries, case-insensitive.
+# An item needs at least one `required` hit to survive the filter at all.
+# ---------------------------------------------------------------------------
+topics:
+  models:
+    - LLM
+    - GPT
+    - model
+    - open weights
+    - SLM
+    - Claude
+    - Gemini
+    - Llama
+    - Mistral
+    - Qwen
+    - DeepSeek
+    - foundation model
+    - frontier model
+    - SLM
+  agents:
+    - agent
+    - agentic
+    - tool use
+    - MCP
+    - function calling
+    - multi-agent
+    - orchestration
+  rag:
+    - RAG
+    - retrieval
+    - retrieval-augmented
+    - vector search
+    - hybrid search
+    - knowledge base
+    - context window
+    - embedding
+    - vector database
+    - reranking
+    - chunking
+    - semantic search
+  training:
+    - fine-tuning
+    - fine-tune
+    - SFT
+    - DPO
+    - GRPO
+    - RLAIF
+    - PEFT
+    - TRL
+    - Unsloth
+    - Axolotl
+    - reward model
+    - LoRA
+    - RLHF
+    - distillation
+    - pretraining
+    - post-training
+    - quantization
+    - quantisation
+  infra:
+    - inference
+    - serving
+    - SGLang
+    - TensorRT
+    - Ollama
+    - llama.cpp
+    - MLX
+    - speculative decoding
+    - batching
+    - tokens per second
+    - vLLM
+    - GPU
+    - CUDA
+    - TPU
+    - latency
+    - throughput
+    - KV cache
+  multimodal:
+    - vision
+    - visual
+    - multimodal
+    - VLM
+    - speech
+    - audio
+    - text-to-speech
+    - image
+    - video
+    - segmentation
+    - OCR
+    - image generation
+    - video generation
+    - diffusion
+  safety:
+    - alignment
+    - safety
+    - guardrail
+    - red team
+    - jailbreak
+    - hallucination
+    - interpretability
+    - model welfare
+  releases:
+    - open source
+    - open-source
+    - open weights
+    - open-weight
+    - released
+    - release
+    - launch
+    - now available
+    - weights
+    - checkpoint
+    - Apache 2.0
+    - MIT license
+    - GGUF
+    - model card
+    - available on Hugging Face
+  evals:
+    - eval
+    - evals
+    - evaluation
+    - benchmark
+    - LLM-as-judge
+    - LLM as a judge
+    - observability
+    - tracing
+    - Langfuse
+    - Braintrust
+    - Ragas
+    - DeepEval
+    - promptfoo
+    - regression test
+    - eval-driven
+    - golden dataset
+    - annotation
+  frameworks:
+    - LangChain
+    - LangGraph
+    - LlamaIndex
+    - DSPy
+    - CrewAI
+    - AutoGen
+    - Pydantic AI
+    - Semantic Kernel
+    - Haystack
+    - agent framework
+    - AI SDK
+    - agent SDK
+    - scaffold
+  dataeng:
+    - data pipeline
+    - data engineering
+    - feature engineering
+    - feature store
+    - ETL
+    - ELT
+    - dbt
+    - Airflow
+    - Dagster
+    - Spark
+    - DuckDB
+    - data warehouse
+    - lakehouse
+    - Parquet
+    - Iceberg
+    - Kafka
+    - streaming
+    - data quality
+    - schema
+  prompting:
+    - prompt engineering
+    - context engineering
+    - system prompt
+    - few-shot
+    - chain-of-thought
+    - reasoning trace
+    - prompt injection
+  applied:
+    - healthcare AI
+    - clinical
+    - enterprise AI
+    - copilot
+    - developer productivity
+    - code generation
+
+required:
+  - AI
+  - artificial intelligence
+  - LLM
+  - GenAI
+  - generative AI
+  - machine learning
+  - deep learning
+  - neural network
+  - model
+  - agent
+  - transformer
+  - diffusion
+  - embedding
+  - inference
+  - GPT
+  - Claude
+  - Gemini
+  - Llama
+
+# Terms that reliably indicate the item is about markets, not technology.
+exclude:
+  - stock price
+  - share price
+  - earnings call
+  - IPO
+  - crypto
+  - bitcoin
+  - NFT
+
+scoring:
+  # Half-life in hours for the recency decay curve.
+  half_life_hours: 36
+  # Keyword hits in the title count for more than hits in the summary.
+  title_keyword_bonus: 3.0
+  summary_keyword_bonus: 0.8
+  # Each additional independent source corroborating an item.
+  corroboration_bonus: 4.0
+  # Open-weight launches are the point of this feed, so items tagged
+  # `releases` get a flat bump on top of their keyword relevance.
+  release_bonus: 6.0
+  # Cap engagement's contribution so one viral post can't dominate the page.
+  max_engagement_points: 12.0
+
+output:
+  # The page is an archive you scroll back through, not a snapshot,
+  # so these are deep. ~3000 items lands around 3MB of JSON.
+  max_items: 3000
+  retention_days: 90

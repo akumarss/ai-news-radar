@@ -1,0 +1,67 @@
+name: Update AI news radar
+
+on:
+  schedule:
+    # Every 3 hours. Times are UTC and GitHub delays scheduled runs under
+    # load, so treat this as "roughly every 3 hours", not a hard guarantee.
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**.py"
+      - "config.yml"
+      - ".github/workflows/update.yml"
+
+# Never let a slow run overlap the next scheduled one.
+concurrency:
+  group: news-radar
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python test_pipeline.py
+
+      - name: Collect news
+        env:
+          # Optional. Absent secrets make the relevant source skip itself
+          # rather than fail the run.
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: python collect.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          if git diff --staged --quiet; then
+            echo "No change in feed data."
+            exit 0
+          fi
+          git commit -m "chore: refresh news data [skip ci]"
+          # Rebase before pushing so a manual run racing the cron doesn't fail.
+          git pull --rebase --autostash origin ${{ github.ref_name }}
+          git push
