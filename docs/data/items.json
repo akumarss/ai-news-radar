@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-11T02:27:30.161049+00:00",
+ "generated_at": "2026-08-11T02:28:19.454684+00:00",
  "stats": {
   "total": 532,
   "new": 0,
@@ -290,14 +290,14 @@
      "source": "Hacker News",
      "url": "https://cactuscompute.com/needle",
      "type": "social",
-     "engagement_label": "187 points · 80 comments"
+     "engagement_label": "187 points · 81 comments"
     }
    ],
    "source_count": 1,
    "published": "2026-08-10T17:22:07+00:00",
    "age_hours": 9.1,
    "engagement": 561,
-   "engagement_label": "187 points · 80 comments",
+   "engagement_label": "187 points · 81 comments",
    "topics": [
     "agents",
     "models",
@@ -310,7 +310,7 @@
     "release",
     "released"
    ],
-   "score": 38.87,
+   "score": 38.86,
    "is_release": true,
    "is_new": false
   },
@@ -349,7 +349,7 @@
     "open-weight",
     "weights"
    ],
-   "score": 35.88,
+   "score": 35.87,
    "is_release": true,
    "is_new": false
   },
@@ -372,7 +372,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-10T10:55:03+00:00",
-   "age_hours": 15.5,
+   "age_hours": 15.6,
    "engagement": 80,
    "engagement_label": "40 points · 9 comments",
    "topics": [
@@ -584,7 +584,7 @@
     "open-weight",
     "release"
    ],
-   "score": 27.65,
+   "score": 27.64,
    "is_release": true,
    "is_new": false
   },
@@ -1522,7 +1522,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-01T16:43:19+00:00",
-   "age_hours": 969.7,
+   "age_hours": 969.8,
    "engagement": 212,
    "engagement_label": "212 likes · 289 downloads",
    "topics": [
@@ -1671,7 +1671,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-02T23:54:55+00:00",
-   "age_hours": 1658.5,
+   "age_hours": 1658.6,
    "engagement": 146,
    "engagement_label": "146 likes · 11,064 downloads",
    "topics": [
@@ -1760,6 +1760,38 @@
    "is_new": false
   },
   {
+   "id": "c3789a1f16cd",
+   "title": "Humanising LLM Outputs Is Dumb",
+   "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
+   "domain": "kuber.studio",
+   "summary": "",
+   "source": "Hacker News",
+   "source_type": "social",
+   "tier": "community",
+   "sources": [
+    {
+     "source": "Hacker News",
+     "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
+     "type": "social",
+     "engagement_label": "161 points · 92 comments"
+    }
+   ],
+   "source_count": 1,
+   "published": "2026-08-10T13:35:40+00:00",
+   "age_hours": 12.9,
+   "engagement": 161,
+   "engagement_label": "161 points · 92 comments",
+   "topics": [
+    "models"
+   ],
+   "terms": [
+    "LLM"
+   ],
+   "score": 19.41,
+   "is_release": false,
+   "is_new": false
+  },
+  {
    "id": "2f46c475cd9d",
    "title": "Introducing Muse Glimmer",
    "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything",
@@ -1799,38 +1831,6 @@
    ],
    "score": 19.4,
    "is_release": true,
-   "is_new": false
-  },
-  {
-   "id": "c3789a1f16cd",
-   "title": "Humanising LLM Outputs Is Dumb",
-   "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
-   "domain": "kuber.studio",
-   "summary": "",
-   "source": "Hacker News",
-   "source_type": "social",
-   "tier": "community",
-   "sources": [
-    {
-     "source": "Hacker News",
-     "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
-     "type": "social",
-     "engagement_label": "160 points · 92 comments"
-    }
-   ],
-   "source_count": 1,
-   "published": "2026-08-10T13:35:40+00:00",
-   "age_hours": 12.9,
-   "engagement": 160,
-   "engagement_label": "160 points · 92 comments",
-   "topics": [
-    "models"
-   ],
-   "terms": [
-    "LLM"
-   ],
-   "score": 19.4,
-   "is_release": false,
    "is_new": false
   },
   {
@@ -2240,7 +2240,7 @@
     "model",
     "safety"
    ],
-   "score": 15.66,
+   "score": 15.65,
    "is_release": false,
    "is_new": false
   },
@@ -2341,7 +2341,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-10T13:12:35+00:00",
-   "age_hours": 13.2,
+   "age_hours": 13.3,
    "engagement": 0,
    "engagement_label": "Hao Sui, Simeng Qin, Jie Liao",
    "topics": [
@@ -2377,7 +2377,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-04T03:49:14+00:00",
-   "age_hours": 166.6,
+   "age_hours": 166.7,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -2697,7 +2697,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-09T17:30:33+00:00",
-   "age_hours": 32.9,
+   "age_hours": 33.0,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -2857,7 +2857,7 @@
     "foundation model",
     "model"
    ],
-   "score": 12.44,
+   "score": 12.43,
    "is_release": false,
    "is_new": false
   },
@@ -2954,7 +2954,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-09T03:13:01+00:00",
-   "age_hours": 47.2,
+   "age_hours": 47.3,
    "engagement": 13,
    "engagement_label": "13 points · 2 comments",
    "topics": [
@@ -3253,7 +3253,7 @@
    ],
    "source_count": 2,
    "published": "2026-08-05T19:42:38+00:00",
-   "age_hours": 126.7,
+   "age_hours": 126.8,
    "engagement": 79,
    "engagement_label": "",
    "topics": [
@@ -3889,7 +3889,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-10T16:30:46+00:00",
-   "age_hours": 9.9,
+   "age_hours": 10.0,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -4256,7 +4256,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-30T15:00:59+00:00",
-   "age_hours": 275.4,
+   "age_hours": 275.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -4649,7 +4649,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-08T10:24:54+00:00",
-   "age_hours": 64.0,
+   "age_hours": 64.1,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -4955,7 +4955,7 @@
     "fine-tune",
     "model"
    ],
-   "score": 8.08,
+   "score": 8.07,
    "is_release": false,
    "is_new": false
   },
@@ -5124,7 +5124,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-01T02:00:42.971000+00:00",
-   "age_hours": 1704.4,
+   "age_hours": 1704.5,
    "engagement": 35,
    "engagement_label": "35 likes · @sungkim.bsky.social",
    "topics": [
@@ -5265,7 +5265,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-10T12:48:41+00:00",
-   "age_hours": 13.6,
+   "age_hours": 13.7,
    "engagement": 0,
    "engagement_label": "Bocheng Chen, Han Zi, Roucheng Ou",
    "topics": [
@@ -5301,7 +5301,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-04T22:00:58+00:00",
-   "age_hours": 148.4,
+   "age_hours": 148.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -5347,7 +5347,7 @@
     "GPT",
     "model"
    ],
-   "score": 7.58,
+   "score": 7.57,
    "is_release": false,
    "is_new": false
   },
@@ -5405,7 +5405,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-06T16:43:19+00:00",
-   "age_hours": 105.7,
+   "age_hours": 105.8,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -5547,7 +5547,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-04T15:00:49+00:00",
-   "age_hours": 155.4,
+   "age_hours": 155.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -5581,7 +5581,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-07T10:06:53+00:00",
-   "age_hours": 88.3,
+   "age_hours": 88.4,
    "engagement": 0,
    "engagement_label": "Jia Wang, Jiaming Cai, Zunying Hu",
    "topics": [
@@ -5618,7 +5618,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-23T12:00:48+00:00",
-   "age_hours": 1166.4,
+   "age_hours": 1166.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -5931,7 +5931,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-01T16:00:36+00:00",
-   "age_hours": 970.4,
+   "age_hours": 970.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -6146,7 +6146,7 @@
    ],
    "source_count": 1,
    "published": "2026-05-28T20:30:52+00:00",
-   "age_hours": 1781.9,
+   "age_hours": 1782.0,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -6184,7 +6184,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-05T18:00:57+00:00",
-   "age_hours": 128.4,
+   "age_hours": 128.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -6196,7 +6196,7 @@
     "open source",
     "open-source"
    ],
-   "score": 7.0,
+   "score": 6.99,
    "is_release": true,
    "is_new": false
   },
@@ -7372,7 +7372,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-07T10:07:03+00:00",
-   "age_hours": 88.3,
+   "age_hours": 88.4,
    "engagement": 0,
    "engagement_label": "Ruijie Hou, Yueyang Jiao, Zhao Wang",
    "topics": [
@@ -8295,7 +8295,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-12T15:42:50.876000+00:00",
-   "age_hours": 1426.7,
+   "age_hours": 1426.8,
    "engagement": 210,
    "engagement_label": "210 likes · @mmitchell.bsky.social",
    "topics": [
@@ -8499,7 +8499,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-07T10:42:58+00:00",
-   "age_hours": 87.7,
+   "age_hours": 87.8,
    "engagement": 0,
    "engagement_label": "Haoyu Zheng, Yun Zhu, Qing Wang",
    "topics": [
@@ -8660,7 +8660,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-10T13:30:46+00:00",
-   "age_hours": 12.9,
+   "age_hours": 13.0,
    "engagement": 0,
    "engagement_label": "Killian Cressant, Pedro B. Velloso",
    "topics": [
@@ -8949,7 +8949,7 @@
     "model",
     "safety"
    ],
-   "score": 4.92,
+   "score": 4.91,
    "is_release": false,
    "is_new": false
   },
@@ -9369,7 +9369,7 @@
    ],
    "source_count": 1,
    "published": "2026-05-27T12:00:55+00:00",
-   "age_hours": 1814.4,
+   "age_hours": 1814.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -9733,7 +9733,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-10T14:19:08+00:00",
-   "age_hours": 12.1,
+   "age_hours": 12.2,
    "engagement": 0,
    "engagement_label": "Yen-Shan Chen, Yu Chian Duan, Chih-En Kuo",
    "topics": [
@@ -10246,7 +10246,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-14T17:01:03+00:00",
-   "age_hours": 657.4,
+   "age_hours": 657.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -10626,7 +10626,7 @@
    ],
    "source_count": 1,
    "published": "2026-05-28T04:06:36+00:00",
-   "age_hours": 1798.3,
+   "age_hours": 1798.4,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -10930,7 +10930,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-06T17:12:36.481000+00:00",
-   "age_hours": 849.2,
+   "age_hours": 849.3,
    "engagement": 115,
    "engagement_label": "115 likes · @mmitchell.bsky.social",
    "topics": [],
@@ -11026,7 +11026,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-28T17:01:03+00:00",
-   "age_hours": 321.4,
+   "age_hours": 321.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -11453,7 +11453,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-16T20:55:00+00:00",
-   "age_hours": 1325.5,
+   "age_hours": 1325.6,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -12176,7 +12176,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-15T06:00:53+00:00",
-   "age_hours": 1364.4,
+   "age_hours": 1364.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -12737,7 +12737,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-18T18:13:13+00:00",
-   "age_hours": 1280.2,
+   "age_hours": 1280.3,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -13150,7 +13150,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-06T07:01:05+00:00",
-   "age_hours": 859.4,
+   "age_hours": 859.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -13246,7 +13246,7 @@
    ],
    "source_count": 1,
    "published": "2026-05-18T08:01:17+00:00",
-   "age_hours": 2034.4,
+   "age_hours": 2034.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -13451,7 +13451,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-23T00:31:01+00:00",
-   "age_hours": 1177.9,
+   "age_hours": 1178.0,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -13924,7 +13924,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-08T12:00:59+00:00",
-   "age_hours": 806.4,
+   "age_hours": 806.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -14057,7 +14057,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-10T15:55:11+00:00",
-   "age_hours": 10.5,
+   "age_hours": 10.6,
    "engagement": 0,
    "engagement_label": "Zijiang Yang, Xiaomeng Wu, Dongmei Fu",
    "topics": [],
@@ -14085,7 +14085,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-10T15:55:07+00:00",
-   "age_hours": 10.5,
+   "age_hours": 10.6,
    "engagement": 0,
    "engagement_label": "Tong Che",
    "topics": [],
@@ -14118,7 +14118,7 @@
    "engagement_label": "Jakub Kacper Szeląg, Aydin Abadi, Mohammad Naseri",
    "topics": [],
    "terms": [],
-   "score": 2.64,
+   "score": 2.63,
    "is_release": false,
    "is_new": false
   },
@@ -14146,7 +14146,7 @@
    "engagement_label": "Mona Furukawa, Sai Hyne, Daniel R. McGowan",
    "topics": [],
    "terms": [],
-   "score": 2.63,
+   "score": 2.62,
    "is_release": false,
    "is_new": false
   },
@@ -14363,7 +14363,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-04T17:01:04+00:00",
-   "age_hours": 1617.4,
+   "age_hours": 1617.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -14783,7 +14783,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-07T16:18:51+00:00",
-   "age_hours": 82.1,
+   "age_hours": 82.2,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -14879,7 +14879,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-15T17:00:52+00:00",
-   "age_hours": 633.4,
+   "age_hours": 633.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -14911,7 +14911,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-16T09:30:42+00:00",
-   "age_hours": 616.9,
+   "age_hours": 617.0,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -15308,7 +15308,7 @@
    "engagement_label": "",
    "topics": [],
    "terms": [],
-   "score": 2.2,
+   "score": 2.19,
    "is_release": false,
    "is_new": false
   },
@@ -15875,7 +15875,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-06T16:30:47+00:00",
-   "age_hours": 105.9,
+   "age_hours": 106.0,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -16007,7 +16007,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-04T15:00:47+00:00",
-   "age_hours": 155.4,
+   "age_hours": 155.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -16235,7 +16235,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-25T22:30:51+00:00",
-   "age_hours": 1107.9,
+   "age_hours": 1108.0,
    "engagement": 0,
    "engagement_label": "",
    "topics": [],
@@ -16263,7 +16263,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-23T16:00:38+00:00",
-   "age_hours": 1162.4,
+   "age_hours": 1162.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [],
@@ -16291,7 +16291,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-04T13:00:47+00:00",
-   "age_hours": 157.4,
+   "age_hours": 157.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -16987,7 +16987,7 @@
    ],
    "source_count": 1,
    "published": "2026-08-04T16:00:56+00:00",
-   "age_hours": 154.4,
+   "age_hours": 154.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [],
@@ -17267,7 +17267,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-27T08:00:53+00:00",
-   "age_hours": 354.4,
+   "age_hours": 354.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [],
@@ -17607,7 +17607,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-21T17:01:04+00:00",
-   "age_hours": 489.4,
+   "age_hours": 489.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [
@@ -17695,7 +17695,7 @@
    ],
    "source_count": 1,
    "published": "2026-07-23T02:00:46+00:00",
-   "age_hours": 456.4,
+   "age_hours": 456.5,
    "engagement": 0,
    "engagement_label": "",
    "topics": [],
@@ -18087,7 +18087,7 @@
    ],
    "source_count": 1,
    "published": "2026-06-03T16:55:00+00:00",
-   "age_hours": 1641.5,
+   "age_hours": 1641.6,
    "engagement": 0,
    "engagement_label": "",
    "topics": [],
