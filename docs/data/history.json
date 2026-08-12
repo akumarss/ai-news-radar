@@ -438,12 +438,12 @@
   "dataeng": 0,
   "evals": 2,
   "frameworks": 0,
-  "infra": 0,
+  "infra": 1,
   "models": 5,
   "multimodal": 0,
   "prompting": 1,
   "rag": 0,
-  "releases": 3,
+  "releases": 4,
   "safety": 1,
   "training": 1
  },
@@ -454,14 +454,14 @@
   "dataeng": 7,
   "evals": 18,
   "frameworks": 2,
-  "infra": 6,
-  "models": 68,
+  "infra": 7,
+  "models": 69,
   "multimodal": 22,
   "prompting": 2,
   "rag": 5,
-  "releases": 15,
+  "releases": 16,
   "safety": 8,
-  "training": 18
+  "training": 19
  },
  {
   "date": "2026-08-11",
