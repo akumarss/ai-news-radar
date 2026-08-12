@@ -484,14 +484,14 @@
   "agents": 4,
   "applied": 0,
   "dataeng": 1,
-  "evals": 1,
+  "evals": 2,
   "frameworks": 0,
   "infra": 1,
-  "models": 6,
+  "models": 7,
   "multimodal": 1,
   "prompting": 0,
   "rag": 2,
-  "releases": 2,
+  "releases": 3,
   "safety": 0,
   "training": 0
  }
