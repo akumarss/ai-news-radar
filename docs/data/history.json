@@ -449,9 +449,9 @@
  },
  {
   "date": "2026-08-12",
-  "agents": 18,
+  "agents": 19,
   "applied": 1,
-  "dataeng": 3,
+  "dataeng": 4,
   "evals": 12,
   "frameworks": 2,
   "infra": 10,
