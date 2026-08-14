@@ -449,7 +449,7 @@
  },
  {
   "date": "2026-08-12",
-  "agents": 19,
+  "agents": 20,
   "applied": 1,
   "dataeng": 3,
   "evals": 12,
@@ -481,17 +481,17 @@
  },
  {
   "date": "2026-08-14",
-  "agents": 2,
+  "agents": 3,
   "applied": 0,
   "dataeng": 1,
-  "evals": 0,
+  "evals": 1,
   "frameworks": 0,
   "infra": 0,
-  "models": 4,
+  "models": 6,
   "multimodal": 0,
   "prompting": 0,
   "rag": 0,
-  "releases": 2,
+  "releases": 3,
   "safety": 0,
   "training": 2
  }
