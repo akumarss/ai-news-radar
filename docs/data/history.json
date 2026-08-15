@@ -423,12 +423,12 @@
   "evals": 13,
   "frameworks": 3,
   "infra": 12,
-  "models": 55,
+  "models": 56,
   "multimodal": 18,
-  "prompting": 4,
+  "prompting": 5,
   "rag": 5,
   "releases": 20,
-  "safety": 4,
+  "safety": 5,
   "training": 11
  },
  {
