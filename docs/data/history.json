@@ -471,7 +471,7 @@
   "evals": 1,
   "frameworks": 0,
   "infra": 1,
-  "models": 8,
+  "models": 9,
   "multimodal": 0,
   "prompting": 0,
   "rag": 1,
