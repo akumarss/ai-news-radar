@@ -456,7 +456,7 @@
   "frameworks": 0,
   "infra": 3,
   "models": 11,
-  "multimodal": 1,
+  "multimodal": 2,
   "prompting": 0,
   "rag": 1,
   "releases": 5,
