@@ -481,7 +481,7 @@
  },
  {
   "date": "2026-08-19",
-  "agents": 2,
+  "agents": 4,
   "applied": 0,
   "dataeng": 0,
   "evals": 0,
@@ -491,7 +491,7 @@
   "multimodal": 0,
   "prompting": 0,
   "rag": 0,
-  "releases": 2,
+  "releases": 3,
   "safety": 2,
   "training": 0
  }
