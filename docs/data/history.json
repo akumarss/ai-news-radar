@@ -487,12 +487,12 @@
   "evals": 0,
   "frameworks": 0,
   "infra": 0,
-  "models": 5,
+  "models": 6,
   "multimodal": 0,
   "prompting": 0,
   "rag": 0,
   "releases": 2,
-  "safety": 1,
+  "safety": 2,
   "training": 0
  }
 ]
