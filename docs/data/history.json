@@ -356,14 +356,14 @@
   "agents": 22,
   "applied": 1,
   "dataeng": 3,
-  "evals": 14,
+  "evals": 15,
   "frameworks": 2,
   "infra": 11,
-  "models": 44,
+  "models": 45,
   "multimodal": 17,
   "prompting": 3,
   "rag": 10,
-  "releases": 11,
+  "releases": 12,
   "safety": 1,
   "training": 6
  },
@@ -493,6 +493,6 @@
   "rag": 0,
   "releases": 0,
   "safety": 0,
-  "training": 1
+  "training": 2
  }
 ]
