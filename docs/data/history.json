@@ -401,11 +401,11 @@
  },
  {
   "date": "2026-08-15",
-  "agents": 1,
+  "agents": 2,
   "applied": 0,
   "dataeng": 1,
   "evals": 0,
-  "frameworks": 0,
+  "frameworks": 1,
   "infra": 1,
   "models": 5,
   "multimodal": 0,
@@ -465,18 +465,18 @@
  },
  {
   "date": "2026-08-19",
-  "agents": 4,
+  "agents": 14,
   "applied": 0,
   "dataeng": 0,
-  "evals": 0,
+  "evals": 3,
   "frameworks": 0,
-  "infra": 1,
-  "models": 10,
-  "multimodal": 0,
+  "infra": 8,
+  "models": 40,
+  "multimodal": 16,
   "prompting": 0,
-  "rag": 0,
-  "releases": 4,
-  "safety": 2,
-  "training": 0
+  "rag": 6,
+  "releases": 8,
+  "safety": 7,
+  "training": 7
  }
 ]
