@@ -473,7 +473,7 @@
   "infra": 1,
   "models": 7,
   "multimodal": 0,
-  "prompting": 0,
+  "prompting": 1,
   "rag": 1,
   "releases": 4,
   "safety": 0,
