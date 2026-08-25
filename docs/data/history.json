@@ -406,14 +406,14 @@
   "dataeng": 1,
   "evals": 13,
   "frameworks": 4,
-  "infra": 10,
+  "infra": 11,
   "models": 46,
   "multimodal": 14,
   "prompting": 1,
   "rag": 8,
-  "releases": 8,
+  "releases": 9,
   "safety": 7,
-  "training": 6
+  "training": 7
  },
  {
   "date": "2026-08-21",
