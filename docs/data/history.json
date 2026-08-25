@@ -454,7 +454,7 @@
   "dataeng": 0,
   "evals": 0,
   "frameworks": 0,
-  "infra": 0,
+  "infra": 1,
   "models": 5,
   "multimodal": 0,
   "prompting": 0,
