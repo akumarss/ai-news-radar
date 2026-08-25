@@ -440,7 +440,7 @@
   "frameworks": 0,
   "infra": 1,
   "models": 5,
-  "multimodal": 2,
+  "multimodal": 1,
   "prompting": 0,
   "rag": 0,
   "releases": 2,
