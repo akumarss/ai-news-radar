@@ -1,21 +1,5 @@
 [
  {
-  "date": "2026-07-30",
-  "agents": 6,
-  "applied": 0,
-  "dataeng": 0,
-  "evals": 0,
-  "frameworks": 3,
-  "infra": 0,
-  "models": 6,
-  "multimodal": 1,
-  "prompting": 0,
-  "rag": 0,
-  "releases": 3,
-  "safety": 0,
-  "training": 0
- },
- {
   "date": "2026-07-31",
   "agents": 2,
   "applied": 0,
@@ -487,11 +471,11 @@
   "evals": 0,
   "frameworks": 0,
   "infra": 0,
-  "models": 1,
-  "multimodal": 0,
+  "models": 2,
+  "multimodal": 1,
   "prompting": 0,
-  "rag": 0,
-  "releases": 0,
+  "rag": 1,
+  "releases": 1,
   "safety": 0,
   "training": 0
  }
