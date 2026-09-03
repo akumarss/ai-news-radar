@@ -1,21 +1,5 @@
 [
  {
-  "date": "2026-08-03",
-  "agents": 4,
-  "applied": 0,
-  "dataeng": 1,
-  "evals": 1,
-  "frameworks": 1,
-  "infra": 4,
-  "models": 8,
-  "multimodal": 2,
-  "prompting": 1,
-  "rag": 0,
-  "releases": 4,
-  "safety": 0,
-  "training": 0
- },
- {
   "date": "2026-08-04",
   "agents": 4,
   "applied": 0,
@@ -481,16 +465,16 @@
  },
  {
   "date": "2026-09-02",
-  "agents": 3,
-  "applied": 1,
+  "agents": 4,
+  "applied": 2,
   "dataeng": 0,
   "evals": 0,
   "frameworks": 1,
   "infra": 2,
-  "models": 11,
+  "models": 12,
   "multimodal": 1,
-  "prompting": 1,
-  "rag": 1,
+  "prompting": 2,
+  "rag": 2,
   "releases": 3,
   "safety": 1,
   "training": 0
