@@ -1,21 +1,5 @@
 [
  {
-  "date": "2026-08-07",
-  "agents": 15,
-  "applied": 5,
-  "dataeng": 3,
-  "evals": 13,
-  "frameworks": 3,
-  "infra": 8,
-  "models": 39,
-  "multimodal": 17,
-  "prompting": 2,
-  "rag": 6,
-  "releases": 10,
-  "safety": 5,
-  "training": 5
- },
- {
   "date": "2026-08-08",
   "agents": 1,
   "applied": 0,
