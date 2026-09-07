@@ -427,7 +427,7 @@
   "multimodal": 13,
   "prompting": 2,
   "rag": 3,
-  "releases": 8,
+  "releases": 7,
   "safety": 6,
   "training": 11
  },
@@ -481,7 +481,7 @@
  },
  {
   "date": "2026-09-07",
-  "agents": 1,
+  "agents": 2,
   "applied": 0,
   "dataeng": 0,
   "evals": 0,
@@ -491,7 +491,7 @@
   "multimodal": 0,
   "prompting": 0,
   "rag": 0,
-  "releases": 0,
+  "releases": 1,
   "safety": 0,
   "training": 0
  }
