@@ -481,18 +481,18 @@
  },
  {
   "date": "2026-09-08",
-  "agents": 2,
+  "agents": 4,
   "applied": 0,
   "dataeng": 2,
-  "evals": 0,
+  "evals": 3,
   "frameworks": 0,
-  "infra": 0,
-  "models": 5,
+  "infra": 1,
+  "models": 9,
   "multimodal": 0,
-  "prompting": 0,
+  "prompting": 1,
   "rag": 0,
   "releases": 3,
-  "safety": 0,
+  "safety": 1,
   "training": 1
  }
 ]
