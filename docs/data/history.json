@@ -435,11 +435,11 @@
   "date": "2026-09-08",
   "agents": 19,
   "applied": 2,
-  "dataeng": 5,
-  "evals": 18,
+  "dataeng": 4,
+  "evals": 19,
   "frameworks": 0,
-  "infra": 4,
-  "models": 54,
+  "infra": 5,
+  "models": 55,
   "multimodal": 13,
   "prompting": 4,
   "rag": 4,
@@ -478,5 +478,21 @@
   "releases": 8,
   "safety": 11,
   "training": 9
+ },
+ {
+  "date": "2026-09-11",
+  "agents": 0,
+  "applied": 0,
+  "dataeng": 1,
+  "evals": 0,
+  "frameworks": 0,
+  "infra": 0,
+  "models": 1,
+  "multimodal": 0,
+  "prompting": 0,
+  "rag": 0,
+  "releases": 1,
+  "safety": 0,
+  "training": 0
  }
 ]
