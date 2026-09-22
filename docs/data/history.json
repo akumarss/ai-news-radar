@@ -408,7 +408,7 @@
   "frameworks": 2,
   "infra": 24,
   "models": 76,
-  "multimodal": 31,
+  "multimodal": 30,
   "prompting": 1,
   "rag": 8,
   "releases": 9,
@@ -481,18 +481,18 @@
  },
  {
   "date": "2026-09-22",
-  "agents": 10,
+  "agents": 11,
   "applied": 1,
   "dataeng": 0,
   "evals": 3,
-  "frameworks": 1,
+  "frameworks": 2,
   "infra": 5,
-  "models": 19,
-  "multimodal": 4,
+  "models": 23,
+  "multimodal": 5,
   "prompting": 0,
   "rag": 1,
-  "releases": 9,
+  "releases": 11,
   "safety": 3,
-  "training": 2
+  "training": 3
  }
 ]
