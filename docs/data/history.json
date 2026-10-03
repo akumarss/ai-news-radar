@@ -103,10 +103,10 @@
   "evals": 10,
   "frameworks": 2,
   "infra": 16,
-  "models": 40,
+  "models": 39,
   "multimodal": 14,
   "prompting": 0,
-  "rag": 10,
+  "rag": 9,
   "releases": 19,
   "safety": 4,
   "training": 6
@@ -487,11 +487,11 @@
   "evals": 0,
   "frameworks": 0,
   "infra": 0,
-  "models": 1,
+  "models": 3,
   "multimodal": 0,
   "prompting": 0,
   "rag": 0,
-  "releases": 1,
+  "releases": 2,
   "safety": 0,
   "training": 0
  }
