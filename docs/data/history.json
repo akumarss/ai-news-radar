@@ -458,7 +458,7 @@
   "models": 36,
   "multimodal": 13,
   "prompting": 1,
-  "rag": 1,
+  "rag": 0,
   "releases": 4,
   "safety": 8,
   "training": 7
