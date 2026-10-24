@@ -455,7 +455,7 @@
   "evals": 8,
   "frameworks": 0,
   "infra": 9,
-  "models": 36,
+  "models": 35,
   "multimodal": 14,
   "prompting": 1,
   "rag": 5,
@@ -481,7 +481,7 @@
  },
  {
   "date": "2026-10-24",
-  "agents": 1,
+  "agents": 2,
   "applied": 0,
   "dataeng": 0,
   "evals": 1,
