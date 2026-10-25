@@ -439,12 +439,12 @@
   "evals": 8,
   "frameworks": 0,
   "infra": 8,
-  "models": 32,
+  "models": 31,
   "multimodal": 13,
   "prompting": 1,
   "rag": 5,
   "releases": 11,
-  "safety": 5,
+  "safety": 4,
   "training": 8
  },
  {
