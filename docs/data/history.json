@@ -61,7 +61,7 @@
   "rag": 3,
   "releases": 12,
   "safety": 1,
-  "training": 9
+  "training": 8
  },
  {
   "date": "2026-10-02",
@@ -388,14 +388,14 @@
   "agents": 9,
   "applied": 3,
   "dataeng": 0,
-  "evals": 7,
-  "frameworks": 1,
+  "evals": 8,
+  "frameworks": 2,
   "infra": 6,
-  "models": 26,
+  "models": 27,
   "multimodal": 11,
   "prompting": 0,
   "rag": 5,
-  "releases": 11,
+  "releases": 12,
   "safety": 3,
   "training": 5
  },
@@ -454,12 +454,12 @@
   "dataeng": 16,
   "evals": 10,
   "frameworks": 2,
-  "infra": 6,
-  "models": 51,
+  "infra": 7,
+  "models": 52,
   "multimodal": 16,
   "prompting": 0,
   "rag": 3,
-  "releases": 9,
+  "releases": 10,
   "safety": 3,
   "training": 7
  },
@@ -481,18 +481,18 @@
  },
  {
   "date": "2026-10-28",
-  "agents": 2,
+  "agents": 6,
   "applied": 0,
-  "dataeng": 0,
-  "evals": 0,
+  "dataeng": 1,
+  "evals": 1,
   "frameworks": 1,
-  "infra": 0,
-  "models": 1,
-  "multimodal": 0,
+  "infra": 4,
+  "models": 8,
+  "multimodal": 1,
   "prompting": 0,
-  "rag": 0,
-  "releases": 1,
+  "rag": 1,
+  "releases": 4,
   "safety": 0,
-  "training": 0
+  "training": 2
  }
 ]
