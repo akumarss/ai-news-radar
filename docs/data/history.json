@@ -1,21 +1,5 @@
 [
  {
-  "date": "2026-10-04",
-  "agents": 0,
-  "applied": 0,
-  "dataeng": 0,
-  "evals": 0,
-  "frameworks": 0,
-  "infra": 1,
-  "models": 2,
-  "multimodal": 1,
-  "prompting": 0,
-  "rag": 0,
-  "releases": 3,
-  "safety": 0,
-  "training": 0
- },
- {
   "date": "2026-10-05",
   "agents": 13,
   "applied": 2,
@@ -81,7 +65,7 @@
  },
  {
   "date": "2026-10-09",
-  "agents": 6,
+  "agents": 5,
   "applied": 0,
   "dataeng": 0,
   "evals": 3,
@@ -92,7 +76,7 @@
   "prompting": 0,
   "rag": 2,
   "releases": 15,
-  "safety": 2,
+  "safety": 1,
   "training": 4
  },
  {
@@ -135,11 +119,11 @@
   "evals": 6,
   "frameworks": 7,
   "infra": 6,
-  "models": 19,
+  "models": 20,
   "multimodal": 3,
   "prompting": 0,
   "rag": 0,
-  "releases": 17,
+  "releases": 18,
   "safety": 0,
   "training": 0
  },
@@ -365,7 +349,7 @@
   "rag": 3,
   "releases": 16,
   "safety": 2,
-  "training": 7
+  "training": 6
  },
  {
   "date": "2026-10-27",
@@ -385,8 +369,8 @@
  },
  {
   "date": "2026-10-28",
-  "agents": 7,
-  "applied": 1,
+  "agents": 6,
+  "applied": 0,
   "dataeng": 1,
   "evals": 1,
   "frameworks": 1,
@@ -406,12 +390,12 @@
   "dataeng": 0,
   "evals": 4,
   "frameworks": 0,
-  "infra": 4,
-  "models": 31,
+  "infra": 5,
+  "models": 32,
   "multimodal": 11,
   "prompting": 0,
   "rag": 3,
-  "releases": 8,
+  "releases": 9,
   "safety": 3,
   "training": 2
  },
@@ -470,9 +454,9 @@
   "dataeng": 1,
   "evals": 11,
   "frameworks": 1,
-  "infra": 4,
-  "models": 29,
-  "multimodal": 9,
+  "infra": 5,
+  "models": 30,
+  "multimodal": 10,
   "prompting": 0,
   "rag": 1,
   "releases": 7,
@@ -481,18 +465,34 @@
  },
  {
   "date": "2026-11-03",
-  "agents": 7,
+  "agents": 6,
   "applied": 0,
   "dataeng": 1,
   "evals": 3,
-  "frameworks": 1,
+  "frameworks": 0,
   "infra": 4,
-  "models": 13,
+  "models": 16,
   "multimodal": 2,
   "prompting": 0,
   "rag": 1,
   "releases": 6,
   "safety": 0,
   "training": 2
+ },
+ {
+  "date": "2026-11-04",
+  "agents": 1,
+  "applied": 0,
+  "dataeng": 0,
+  "evals": 0,
+  "frameworks": 1,
+  "infra": 0,
+  "models": 0,
+  "multimodal": 0,
+  "prompting": 0,
+  "rag": 0,
+  "releases": 1,
+  "safety": 0,
+  "training": 0
  }
 ]
